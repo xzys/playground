@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfgp1s33l0kpo"]
+
+[ext_resource type="Theme" uid="uid://h8ohxxnspjb1" path="res://ui/theme.tres" id="1_adfmw"]
+[ext_resource type="PackedScene" uid="uid://cirxhkshf0m8a" path="res://ui/inventory/inventory.tscn" id="1_ybrl6"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -190.0
+offset_right = 190.0
+theme = ExtResource( "1_adfmw" )
+
+[node name="Inventory" parent="." instance=ExtResource( "1_ybrl6" )]
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 170.0
+offset_bottom = 170.0

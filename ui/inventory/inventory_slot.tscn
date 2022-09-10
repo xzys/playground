@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://biy2whuwwoci5"]
+
+[node name="InventorySlot" type="CenterContainer"]
+minimum_size = Vector2(30, 30)
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+minimum_size = Vector2(30, 30)
+offset_left = 497.0
+offset_top = 285.0
+offset_right = 527.0
+offset_bottom = 315.0
+color = Color(1, 1, 1, 0.0784314)
