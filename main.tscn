@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://lqxyskva3lcw"]
+[gd_scene load_steps=10 format=3 uid="uid://lqxyskva3lcw"]
 
 [ext_resource type="PackedScene" uid="uid://defgf48lcmfjy" path="res://boy/boy.tscn" id="1_aadj4"]
 [ext_resource type="Script" path="res://character.gd" id="1_he1eu"]
 [ext_resource type="Script" path="res://camera.gd" id="3_d6bc3"]
 [ext_resource type="PackedScene" uid="uid://uj5rl5joqfwl" path="res://level/tree.tscn" id="4_g2kpr"]
 [ext_resource type="PackedScene" uid="uid://dfgp1s33l0kpo" path="res://ui/ui.tscn" id="5_qvfe2"]
+[ext_resource type="PackedScene" uid="uid://mc1fijkfvbkw" path="res://level/rock.tscn" id="6_ixo1l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a30y8"]
 size = Vector3(50, 1, 50)
@@ -44,3 +45,6 @@ size = 10.0
 script = ExtResource( "3_d6bc3" )
 
 [node name="UI" parent="." instance=ExtResource( "5_qvfe2" )]
+
+[node name="Rock" parent="." instance=ExtResource( "6_ixo1l" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, 4)

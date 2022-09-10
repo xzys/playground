@@ -170,7 +170,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource( "ArrayMesh_u7u4h" )
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mel6e"]
-radius = 1.0
+radius = 0.75
 height = 4.0
 
 [node name="boy" type="CharacterBody3D"]
@@ -182,7 +182,6 @@ transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
 transform = Transform3D(61.0621, 0, 0, 0, -9.94827e-06, 61.0621, 0, -61.0621, -9.94827e-06, 0, 0, 0)
 
 [node name="Cylinder_Material_0" type="MeshInstance3D" parent="model/Cylinder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 gi_mode = 1
 mesh = SubResource( "ArrayMesh_26ucv" )
 skeleton = NodePath("")
