@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://g0qamuply0yt"
+uid="uid://da0dmdc5ulqgq"
 path="res://.godot/imported/scene.gltf-09b32f978429b6c640479aeec17c34a9.scn"
 
 [deps]
@@ -31,6 +31,10 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/path": "res://level/tree.res"
 },
+"Sketchfab_Scene_Object_48": {
+"save_to_file/enabled": true,
+"save_to_file/path": "res://npcs/fox.res"
+},
 "Sketchfab_Scene_Object_7": {
 "save_to_file/enabled": true,
 "save_to_file/path": "res://level/rock.res"
@@ -53,9 +57,6 @@ _subresources={
 "import/skip_import": true
 },
 "PATH:Sketchfab_model/root/GLTF_SceneRootNode/Cube005_76": {
-"import/skip_import": true
-},
-"PATH:Sketchfab_model/root/GLTF_SceneRootNode/Cube006_77": {
 "import/skip_import": true
 },
 "PATH:Sketchfab_model/root/GLTF_SceneRootNode/Cube007_85": {

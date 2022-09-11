@@ -170,7 +170,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource( "ArrayMesh_u7u4h" )
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mel6e"]
-radius = 0.75
 height = 4.0
 
 [node name="boy" type="CharacterBody3D"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctrnlxgbjrcsg"]
+
+[ext_resource type="ArrayMesh" uid="uid://cpcm8fw84kmiq" path="res://npcs/sheep.res" id="1_w3cu1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yqjtf"]
+size = Vector3(1.5, 2.25, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lfdjd"]
+size = Vector3(0.75, 0.75, 0.75)
+
+[node name="Sheep" type="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = ExtResource( "1_w3cu1" )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, 0)
+shape = SubResource( "BoxShape3D_yqjtf" )
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 1.8)
+shape = SubResource( "BoxShape3D_lfdjd" )

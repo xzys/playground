@@ -7,7 +7,7 @@ radius = 1.0
 height = 10.0
 
 [node name="Tree" type="StaticBody3D"]
-transform = Transform3D(0.528, 0, 0, 0, 0.528, 0, 0, 0, 0.528, 0, 0, 0)
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 
 [node name="Object_6" type="MeshInstance3D" parent="."]
 gi_mode = 1

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bty8ii38l3f7y"]
+
+[ext_resource type="ArrayMesh" uid="uid://bor82viq67dnb" path="res://npcs/pig.res" id="1_l6m3e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h4yr3"]
+size = Vector3(1.5, 2, 3.5)
+
+[node name="Pig" type="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = ExtResource( "1_l6m3e" )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.4)
+shape = SubResource( "BoxShape3D_h4yr3" )

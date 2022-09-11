@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://vl5ypq1fxddh"]
+
+[ext_resource type="ArrayMesh" uid="uid://cv42gnfkt4il4" path="res://npcs/cow.res" id="1_v6635"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tuvpo"]
+size = Vector3(3, 4, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h80kt"]
+size = Vector3(1, 2, 1.5)
+
+[node name="Cow" type="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = ExtResource( "1_v6635" )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource( "BoxShape3D_tuvpo" )
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75, 3)
+shape = SubResource( "BoxShape3D_h80kt" )

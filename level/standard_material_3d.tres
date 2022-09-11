@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c7svj2yu2k3a8"]
+
+[ext_resource type="Texture2D" uid="uid://dtky0t43ra8qq" path="res://level/gltf/textures/Material_baseColor.png" id="1_5ff58"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource( "1_5ff58" )

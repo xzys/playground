@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0le25w8f4vwe"]
+
+[ext_resource type="ArrayMesh" uid="uid://clwgs8aa6qnw6" path="res://npcs/chicken.res" id="1_rflkp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qe3ak"]
+radius = 0.75
+
+[node name="Chicken" type="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = ExtResource( "1_rflkp" )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource( "CapsuleShape3D_qe3ak" )
