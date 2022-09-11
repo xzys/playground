@@ -5,8 +5,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_tuvpo"]
 size = Vector3(3, 4, 5)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_h80kt"]
-size = Vector3(1, 2, 1.5)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dkg0q"]
+radius = 0.75
+height = 2.5
 
 [node name="Cow" type="CharacterBody3D"]
 
@@ -19,5 +20,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource( "BoxShape3D_tuvpo" )
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75, 3)
-shape = SubResource( "BoxShape3D_h80kt" )
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 3.75, 2.7)
+shape = SubResource( "CapsuleShape3D_dkg0q" )

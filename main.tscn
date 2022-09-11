@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://lqxyskva3lcw"]
+[gd_scene load_steps=22 format=3 uid="uid://lqxyskva3lcw"]
 
 [ext_resource type="PackedScene" uid="uid://defgf48lcmfjy" path="res://boy/boy.tscn" id="1_aadj4"]
 [ext_resource type="Script" path="res://character.gd" id="1_he1eu"]
@@ -12,9 +12,15 @@
 [ext_resource type="PackedScene" uid="uid://udvsely32o3r" path="res://npcs/duck.tscn" id="10_71cow"]
 [ext_resource type="PackedScene" uid="uid://ctrnlxgbjrcsg" path="res://npcs/sheep.tscn" id="11_vlp18"]
 [ext_resource type="PackedScene" uid="uid://b41teujl0lcel" path="res://npcs/fox.tscn" id="12_jjtmo"]
+[ext_resource type="PackedScene" uid="uid://coa0pfqj0alva" path="res://level/tree_bell.tscn" id="13_rhki5"]
+[ext_resource type="PackedScene" uid="uid://ypkctbrb6p3f" path="res://level/tree_diamond.tscn" id="14_fia3o"]
+[ext_resource type="PackedScene" uid="uid://bcjy6ai6cgcen" path="res://level/tree_pine.tscn" id="15_bhqh3"]
+[ext_resource type="PackedScene" uid="uid://7t4e846nwx85" path="res://level/tree_pink.tscn" id="16_1m6ak"]
+[ext_resource type="PackedScene" uid="uid://bq0aeixf0q65w" path="res://level/tree_round.tscn" id="17_6un6l"]
+[ext_resource type="PackedScene" uid="uid://n86r8o28q0ph" path="res://level/tree_stack.tscn" id="18_yx8sp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a30y8"]
-size = Vector3(50, 1, 50)
+size = Vector3(100, 1, 100)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xwfw"]
 shading_mode = 0
@@ -22,14 +28,14 @@ albedo_color = Color(0.960784, 0.835294, 0.498039, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_l64x3"]
 material = SubResource( "StandardMaterial3D_1xwfw" )
-size = Vector3(50, 1, 50)
+size = Vector3(100, 1, 100)
 
 [node name="Node3D" type="Node3D"]
 
 [node name="UI" parent="." instance=ExtResource( "5_qvfe2" )]
 
 [node name="camera" type="Camera3D" parent="."]
-transform = Transform3D(0.707107, 0.353553, -0.612373, 0, 0.866026, 0.5, 0.707107, -0.353553, 0.612373, -5, 5, 5)
+transform = Transform3D(0.707107, 0.353553, -0.612373, 0, 0.866026, 0.5, 0.707107, -0.353553, 0.612373, -10, 10, 10)
 projection = 1
 current = true
 fov = 70.3125
@@ -52,26 +58,44 @@ shape = SubResource( "BoxShape3D_a30y8" )
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
 mesh = SubResource( "BoxMesh_l64x3" )
 
-[node name="tree1" parent="." instance=ExtResource( "4_g2kpr" )]
-transform = Transform3D(0.528, 0, 0, 0, 0.528, 0, 0, 0, 0.528, 2, 0, 0)
-
 [node name="Rock" parent="." instance=ExtResource( "6_ixo1l" )]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, 4)
 
-[node name="Pig" parent="." instance=ExtResource( "7_ww3am" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2738, 0, 3.55518)
-
 [node name="Chicken" parent="." instance=ExtResource( "8_upexc" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06488, 0, 1.95093)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0)
 
 [node name="Cow" parent="." instance=ExtResource( "5_7n224" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.97485, 0, 0.0333252)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 0)
 
 [node name="Duck" parent="." instance=ExtResource( "10_71cow" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06919, 0, 7.54187)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 
 [node name="Sheep" parent="." instance=ExtResource( "11_vlp18" )]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.85309, 0, 4.37952)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -0.465)
+
+[node name="Pig" parent="." instance=ExtResource( "7_ww3am" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 
 [node name="Fox" parent="." instance=ExtResource( "12_jjtmo" )]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 6.32294, 0, -1.04832)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.5, 0, -0.383)
+
+[node name="Tree" parent="." instance=ExtResource( "4_g2kpr" )]
+transform = Transform3D(0.528, 0, 0, 0, 0.528, 0, 0, 0, 0.528, 5.39578, 0, -8.27319)
+
+[node name="TreeBell" parent="." instance=ExtResource( "13_rhki5" )]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.194565, -0.5, -8.80798)
+
+[node name="TreeDiamond" parent="." instance=ExtResource( "14_fia3o" )]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -7.32132, 0, -8.00049)
+
+[node name="TreePine" parent="." instance=ExtResource( "15_bhqh3" )]
+transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 11.8067, 0, -9.15149)
+
+[node name="TreePink" parent="." instance=ExtResource( "16_1m6ak" )]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -15.647, 0, -8.6427)
+
+[node name="TreeRound" parent="." instance=ExtResource( "17_6un6l" )]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 19.4552, 0, -8.0813)
+
+[node name="TreeStack" parent="." instance=ExtResource( "18_yx8sp" )]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 27.3811, 0, -7.95764)

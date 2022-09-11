@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ypkctbrb6p3f"]
+
+[ext_resource type="ArrayMesh" uid="uid://boehqf3mc544e" path="res://level/tree_diamond.res" id="1_8iuah"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_b06em"]
+radius = 0.25
+
+[node name="TreeDiamond" type="StaticBody3D"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource( "1_8iuah" )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource( "CylinderShape3D_b06em" )
