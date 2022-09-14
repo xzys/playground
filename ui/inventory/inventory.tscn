@@ -1,162 +1,221 @@
-[gd_scene load_steps=3 format=3 uid="uid://cirxhkshf0m8a"]
+[gd_scene load_steps=4 format=3 uid="uid://cirxhkshf0m8a"]
 
 [ext_resource type="PackedScene" uid="uid://biy2whuwwoci5" path="res://ui/inventory/inventory_slot.tscn" id="1_as8e7"]
 [ext_resource type="Script" path="res://ui/inventory/inventory.gd" id="1_orkar"]
+[ext_resource type="Script" path="res://ui/inventory/inventory_display.gd" id="2_sg61p"]
 
 [node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-script = ExtResource( "1_orkar" )
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("1_orkar")
 
 [node name="InventoryClosed" type="ColorRect" parent="."]
 visible = false
-minimum_size = Vector2(30, 30)
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -30.0
 offset_right = 30.0
+grow_vertical = 0
 
 [node name="InventoryOpen" type="ColorRect" parent="."]
 clip_contents = true
-minimum_size = Vector2(180, 180)
+custom_minimum_size = Vector2(180, 180)
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
+offset_top = -180.0
+offset_right = 180.0
 grow_vertical = 0
+mouse_filter = 2
 color = Color(0.603922, 0.392157, 0.239216, 1)
-__meta__ = {
-"_edit_layout_mode": 1,
-"_edit_use_custom_anchors": false
-}
 
 [node name="CenterContainer" type="CenterContainer" parent="InventoryOpen"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
-[node name="GridContainer" type="GridContainer" parent="InventoryOpen/CenterContainer"]
-offset_left = 18.0
-offset_top = 18.0
-offset_right = 162.0
-offset_bottom = 162.0
-theme_override_constants/vseparation = 8
-theme_override_constants/hseparation = 8
+[node name="InventoryDisplay" type="GridContainer" parent="InventoryOpen/CenterContainer"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 160.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
 columns = 4
+script = ExtResource("2_sg61p")
 
-[node name="InventorySlot" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_right = 30.0
-offset_bottom = 30.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot2" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot2" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 38.0
-offset_right = 68.0
-offset_bottom = 30.0
+offset_left = 35.0
+offset_right = 70.0
+offset_bottom = 35.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot3" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot3" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 76.0
-offset_right = 106.0
-offset_bottom = 30.0
+offset_left = 70.0
+offset_right = 105.0
+offset_bottom = 35.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot4" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot4" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 114.0
-offset_right = 144.0
-offset_bottom = 30.0
+offset_left = 105.0
+offset_right = 140.0
+offset_bottom = 35.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot5" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot5" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_top = 38.0
-offset_right = 30.0
-offset_bottom = 68.0
+offset_top = 35.0
+offset_right = 35.0
+offset_bottom = 70.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot6" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot6" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 38.0
-offset_top = 38.0
-offset_right = 68.0
-offset_bottom = 68.0
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 70.0
+offset_bottom = 70.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot7" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot7" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 76.0
-offset_top = 38.0
-offset_right = 106.0
-offset_bottom = 68.0
+offset_left = 70.0
+offset_top = 35.0
+offset_right = 105.0
+offset_bottom = 70.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot8" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot8" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 114.0
-offset_top = 38.0
-offset_right = 144.0
-offset_bottom = 68.0
+offset_left = 105.0
+offset_top = 35.0
+offset_right = 140.0
+offset_bottom = 70.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot9" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot9" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_top = 76.0
-offset_right = 30.0
-offset_bottom = 106.0
+offset_top = 70.0
+offset_right = 35.0
+offset_bottom = 105.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot10" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot10" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 38.0
-offset_top = 76.0
-offset_right = 68.0
-offset_bottom = 106.0
+offset_left = 35.0
+offset_top = 70.0
+offset_right = 70.0
+offset_bottom = 105.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot11" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot11" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 76.0
-offset_top = 76.0
-offset_right = 106.0
-offset_bottom = 106.0
+offset_left = 70.0
+offset_top = 70.0
+offset_right = 105.0
+offset_bottom = 105.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot12" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot12" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 114.0
-offset_top = 76.0
-offset_right = 144.0
-offset_bottom = 106.0
+offset_left = 105.0
+offset_top = 70.0
+offset_right = 140.0
+offset_bottom = 105.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot13" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot13" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_top = 114.0
-offset_right = 30.0
-offset_bottom = 144.0
+offset_top = 105.0
+offset_right = 35.0
+offset_bottom = 140.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot14" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot14" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 38.0
-offset_top = 114.0
-offset_right = 68.0
-offset_bottom = 144.0
+offset_left = 35.0
+offset_top = 105.0
+offset_right = 70.0
+offset_bottom = 140.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot15" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot15" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 76.0
-offset_top = 114.0
-offset_right = 106.0
-offset_bottom = 144.0
+offset_left = 70.0
+offset_top = 105.0
+offset_right = 105.0
+offset_bottom = 140.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="InventorySlot16" parent="InventoryOpen/CenterContainer/GridContainer" instance=ExtResource( "1_as8e7" )]
+[node name="InventorySlot16" parent="InventoryOpen/CenterContainer/InventoryDisplay" instance=ExtResource("1_as8e7")]
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 114.0
-offset_top = 114.0
-offset_right = 144.0
-offset_bottom = 144.0
+offset_left = 105.0
+offset_top = 105.0
+offset_right = 140.0
+offset_bottom = 140.0
+grow_horizontal = 1
+grow_vertical = 1

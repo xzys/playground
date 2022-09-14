@@ -7,7 +7,7 @@ const ROTATION_SPEED = 0.3
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var model = get_node('model')
+var model = get_node('Model')
 
 signal toggle_inventory()
 

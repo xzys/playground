@@ -1,7 +1,7 @@
 extends Camera3D
 
 @onready
-var player = get_node('../player')
+var player = get_node('/root/Game/Player')
 var intial_pos
 var screensize
 

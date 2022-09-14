@@ -1,19 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfgp1s33l0kpo"]
+[gd_scene load_steps=4 format=3 uid="uid://d3f0tj5m2hmrp"]
 
 [ext_resource type="Theme" uid="uid://h8ohxxnspjb1" path="res://ui/theme.tres" id="1_adfmw"]
 [ext_resource type="PackedScene" uid="uid://cirxhkshf0m8a" path="res://ui/inventory/inventory.tscn" id="1_ybrl6"]
+[ext_resource type="Script" path="res://ui/ui.gd" id="2_m6ven"]
 
-[node name="MarginContainer" type="MarginContainer"]
-anchor_top = 1.0
+[node name="UI" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 40.0
-theme = ExtResource( "1_adfmw" )
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_adfmw")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("2_m6ven")
 
-[node name="Inventory" parent="." instance=ExtResource( "1_ybrl6" )]
+[node name="Inventory" parent="." instance=ExtResource("1_ybrl6")]
+anchors_preset = 0
 anchor_top = 0.0
 anchor_bottom = 0.0
 offset_left = 20.0
 offset_top = 20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_right = 1132.0
+offset_bottom = 628.0
+grow_vertical = 1

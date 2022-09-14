@@ -8,12 +8,28 @@
 
 config_version=5
 
+_global_script_classes=[{
+"base": "Resource",
+"class": &"InventoryItem",
+"language": &"GDScript",
+"path": "res://items/inventory_item.gd"
+}, {
+"base": "StaticBody3D",
+"class": &"StaticItem",
+"language": &"GDScript",
+"path": "res://items/static_item.gd"
+}]
+_global_script_class_icons={
+"InventoryItem": "",
+"StaticItem": ""
+}
+
 [application]
 
 config/name="playground"
 run/main_scene="res://main.tscn"
-config/icon="res://icon.png"
 config/features=PackedStringArray("4.0", "Vulkan Mobile")
+config/icon="res://icon.png"
 
 [display]
 

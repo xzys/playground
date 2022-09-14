@@ -1,6 +1,9 @@
-[gd_resource type="Theme" format=3 uid="uid://h8ohxxnspjb1"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://h8ohxxnspjb1"]
+
+[ext_resource type="FontFile" uid="uid://ddob34e3t5pfy" path="res://assets/m5x7.ttf" id="1_4f5yv"]
 
 [resource]
+default_font = ExtResource("1_4f5yv")
 GridContainer/constants/hseparation = 5
 GridContainer/constants/vseparation = 5
 MarginContainer/constants/margin_bottom = 20

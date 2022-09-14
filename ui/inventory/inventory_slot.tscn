@@ -1,14 +1,42 @@
-[gd_scene format=3 uid="uid://biy2whuwwoci5"]
+[gd_scene load_steps=3 format=3 uid="uid://biy2whuwwoci5"]
+
+[ext_resource type="Script" path="res://ui/inventory/inventory_slot.gd" id="1_g4n0g"]
+[ext_resource type="Theme" uid="uid://h8ohxxnspjb1" path="res://ui/theme.tres" id="2_tuw20"]
 
 [node name="InventorySlot" type="CenterContainer"]
-minimum_size = Vector2(30, 30)
+custom_minimum_size = Vector2(35, 35)
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g4n0g")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-minimum_size = Vector2(30, 30)
-offset_left = 497.0
-offset_top = 285.0
-offset_right = 527.0
-offset_bottom = 315.0
+custom_minimum_size = Vector2(30, 30)
+offset_left = 561.0
+offset_top = 309.0
+offset_right = 591.0
+offset_bottom = 339.0
 color = Color(1, 1, 1, 0.0784314)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(30, 30)
+offset_left = 561.0
+offset_top = 309.0
+offset_right = 591.0
+offset_bottom = 339.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(25, 25)
+offset_left = 563.0
+offset_top = 311.0
+offset_right = 588.0
+offset_bottom = 336.0
+size_flags_vertical = 1
+theme = ExtResource("2_tuw20")
+horizontal_alignment = 2
+vertical_alignment = 2
