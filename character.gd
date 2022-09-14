@@ -7,13 +7,33 @@ const ROTATION_SPEED = 0.3
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var model = get_node('Model')
+@onready var model = $Model
+@onready var area: Area3D = $NearbyArea
 
 signal toggle_inventory()
+
+
+func _ready():
+	area.body_entered.connect(_on_body_entered)
+	area.body_exited.connect(_on_body_exited)
+
+func _on_body_entered(body):
+	if body is StaticItem:
+		body.show_label()
+
+func _on_body_exited(body):
+	if body is StaticItem:
+		body.hide_label()
 
 func handle_controls():
 	if Input.is_action_just_pressed("toggle_inventory"):
 		emit_signal("toggle_inventory")
+	
+	if Input.is_action_just_pressed('interact'):
+		var bodies = area.get_overlapping_bodies()
+		for b in bodies:
+			if b is StaticItem:
+				b.pick_up()
 
 
 func handle_movement(delta):

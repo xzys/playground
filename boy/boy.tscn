@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://defgf48lcmfjy"]
+[gd_scene load_steps=16 format=3 uid="uid://defgf48lcmfjy"]
 
+[ext_resource type="Script" path="res://character.gd" id="1_3sjwo"]
 [ext_resource type="Texture2D" uid="uid://b2ib44m24g50k" path="res://boy/gltf/textures/Material_baseColor.png" id="1_417cr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kocbk"]
@@ -172,7 +173,12 @@ shadow_mesh = SubResource("ArrayMesh_u7u4h")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mel6e"]
 height = 4.0
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8m7qy"]
+height = 4.0
+radius = 1.25
+
 [node name="Boy" type="CharacterBody3D"]
+script = ExtResource("1_3sjwo")
 
 [node name="Model" type="Node3D" parent="."]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
@@ -215,3 +221,9 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("CapsuleShape3D_mel6e")
+
+[node name="NearbyArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3d" type="CollisionShape3D" parent="NearbyArea"]
+shape = SubResource("CylinderShape3D_8m7qy")

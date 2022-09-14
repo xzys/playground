@@ -1,11 +1,26 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://h8ohxxnspjb1"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://h8ohxxnspjb1"]
 
 [ext_resource type="FontFile" uid="uid://ddob34e3t5pfy" path="res://assets/m5x7.ttf" id="1_4f5yv"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rfwf5"]
+
 [resource]
 default_font = ExtResource("1_4f5yv")
+default_font_size = 32
 GridContainer/constants/hseparation = 5
 GridContainer/constants/vseparation = 5
+InventoryItemLabel/base_type = &"Label"
+InventoryItemLabel/font_sizes/font_size = 16
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 32
+Label/styles/normal = SubResource("StyleBoxEmpty_rfwf5")
 MarginContainer/constants/margin_bottom = 20
 MarginContainer/constants/margin_left = 20
 MarginContainer/constants/margin_right = 20

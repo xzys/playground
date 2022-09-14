@@ -1,7 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://ccpfpeaw8m8rv"]
+[gd_scene load_steps=22 format=3 uid="uid://ccpfpeaw8m8rv"]
 
 [ext_resource type="PackedScene" uid="uid://defgf48lcmfjy" path="res://boy/boy.tscn" id="1_aadj4"]
-[ext_resource type="Script" path="res://character.gd" id="1_he1eu"]
 [ext_resource type="Script" path="res://camera.gd" id="3_d6bc3"]
 [ext_resource type="PackedScene" uid="uid://uj5rl5joqfwl" path="res://level/tree.tscn" id="4_g2kpr"]
 [ext_resource type="PackedScene" uid="uid://vl5ypq1fxddh" path="res://npcs/cow.tscn" id="5_7n224"]
@@ -48,7 +47,6 @@ transform = Transform3D(-0.785744, 0.562391, 0.257534, -0.289072, -0.701952, 0.6
 sky_mode = 2
 
 [node name="Player" parent="." instance=ExtResource("1_aadj4")]
-script = ExtResource("1_he1eu")
 
 [node name="Level" type="Node3D" parent="."]
 script = ExtResource("5_hawcj")
@@ -103,3 +101,5 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 27.3811, 0, -7.95764)
 
 [node name="Rock" parent="Level" instance=ExtResource("19_finpi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.2, 4)
+
+[node name="LabelCanvas" type="CanvasLayer" parent="."]

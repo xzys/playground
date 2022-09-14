@@ -21,9 +21,6 @@ func _ready():
 	assert(per_side == floor(per_side))
 	# create empty items
 	items.resize(num_items)
-	set_item(0, rock)
-	set_item(1, rock)
-	print(items)
 	
 
 func _on_toggle_inventory():
@@ -31,21 +28,31 @@ func _on_toggle_inventory():
 	$InventoryClosed.visible = !open
 	$InventoryOpen.visible = open
 
-func set_item(item_index, item):
-	assert(item is InventoryItem)
+func add_item(item: InventoryItem) -> bool:
+	for index in range(len(items)):
+		if items[index] == null:
+			set_item(index, item)
+			return true
+		elif items[index].name == item.name:
+			items[index].amount += 1
+			emit_signal("items_changed", [index])
+			return true
+	return false
+
+func set_item(item_index: int, item: InventoryItem):
 	var prev = items[item_index]
 	items[item_index] = item
 	emit_signal("items_changed", [item_index])
 	return prev
 
-func swap_items(item_index, target_item_index):
+func swap_items(item_index: int, target_item_index: int):
 	var target = items[target_item_index]
 	var item = items[item_index]
 	items[target_item_index] = item
 	items[item_index] = target
 	emit_signal("items_changed", [item_index, target_item_index])
 
-func remove_item(item_index):
+func remove_item(item_index: int):
 	var prev = items[item_index]
 	items[item_index] = null
 	emit_signal("items_changed", [item_index])
