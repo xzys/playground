@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://da0dmdc5ulqgq"
+uid="uid://cuxxqhirpxtmx"
 path="res://.godot/imported/scene.gltf-09b32f978429b6c640479aeec17c34a9.scn"
 
 [deps]
@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/scene.gltf-09b32f978429b6c640479aeec17c34a9.s
 
 nodes/root_type="Node3D"
 nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -28,15 +29,33 @@ import_script/path=""
 _subresources={
 "meshes": {
 "Sketchfab_Scene_Object_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
 "save_to_file/path": "res://level/tree.res"
 },
 "Sketchfab_Scene_Object_48": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
 "save_to_file/path": "res://npcs/fox.res"
 },
 "Sketchfab_Scene_Object_7": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
 "save_to_file/path": "res://level/rock.res"
 }
 },
@@ -59,10 +78,16 @@ _subresources={
 "PATH:Sketchfab_model/root/GLTF_SceneRootNode/Cube005_76": {
 "import/skip_import": true
 },
+"PATH:Sketchfab_model/root/GLTF_SceneRootNode/Cube006_77": {
+"import/skip_import": true
+},
 "PATH:Sketchfab_model/root/GLTF_SceneRootNode/Cube007_85": {
 "import/skip_import": true
 },
 "PATH:Sketchfab_model/root/GLTF_SceneRootNode/Cube008_86": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/root/GLTF_SceneRootNode/Cube_10": {
 "import/skip_import": true
 },
 "PATH:Sketchfab_model/root/GLTF_SceneRootNode/Grass1001_42": {
@@ -204,6 +229,9 @@ _subresources={
 "import/skip_import": true
 },
 "PATH:Sketchfab_model/root/GLTF_SceneRootNode/tree005_9": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/root/GLTF_SceneRootNode/tree_4": {
 "import/skip_import": true
 }
 }

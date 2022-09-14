@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://buyk43l0w63cm"
+uid="uid://bufslho72ra4f"
 path="res://.godot/imported/FarmAnimals_v2.gltf-fad4c1f0e2d711602a0b4ee87f6a6d75.scn"
 
 [deps]
@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/FarmAnimals_v2.gltf-fad4c1f0e2d711602a0b4ee87
 
 nodes/root_type="Node3D"
 nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -28,24 +29,71 @@ import_script/path=""
 _subresources={
 "meshes": {
 "FarmAnimals_v2_Cube000": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
 "save_to_file/path": "res://npcs/duck.res"
 },
 "FarmAnimals_v2_Cube005": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
 "save_to_file/path": "res://npcs/cow.res"
 },
 "FarmAnimals_v2_Cube007": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
 "save_to_file/path": "res://npcs/sheep.res"
 },
 "FarmAnimals_v2_Cube009": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
 "save_to_file/path": "res://npcs/pig.res"
 },
 "FarmAnimals_v2_Cube027": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
 "save_to_file/path": "res://npcs/chicken.res"
+}
+},
+"nodes": {
+"PATH:ChickenBrown": {
+"import/skip_import": true
+},
+"PATH:CowBlW": {
+"import/skip_import": true
+},
+"PATH:DuckWhite": {
+"import/skip_import": true
+},
+"PATH:Pig": {
+"import/skip_import": true
+},
+"PATH:SheepWhite": {
+"import/skip_import": true
 }
 }
 }

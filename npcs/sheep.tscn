@@ -13,12 +13,12 @@ height = 1.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
-mesh = ExtResource( "1_w3cu1" )
+mesh = ExtResource("1_w3cu1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, 0)
-shape = SubResource( "BoxShape3D_yqjtf" )
+shape = SubResource("BoxShape3D_yqjtf")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 2.25, 1.5)
-shape = SubResource( "CapsuleShape3D_mrsej" )
+shape = SubResource("CapsuleShape3D_mrsej")
