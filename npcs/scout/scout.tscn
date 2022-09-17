@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dolt8tsjjaxnx"]
 
-[ext_resource type="Script" path="res://npcs/npc.gd" id="1_kk4iq"]
+[ext_resource type="Script" path="res://npcs/scout/scout.gd" id="1_qrl8k"]
 [ext_resource type="Material" uid="uid://dtryuvu0cg8ds" path="res://npcs/scout/scout_material.tres" id="2_3dbj2"]
 [ext_resource type="Script" path="res://ui/floating_label.gd" id="3_511fw"]
 [ext_resource type="Script" path="res://ui/speech_bubble.gd" id="4_wgi3y"]
@@ -195,17 +195,16 @@ bind/33/bone = -1
 bind/33/pose = Transform3D(-97.8096, -17.7397, -12.1338, -12.4091, -0.0185818, 99.2442, -17.6349, 98.4139, -2.16809, -10.0941, -11.8123, -2.08471)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mqg8p"]
-radius = 0.25
-height = 1.75
+radius = 0.75
+height = 4.5
 
 [node name="Scout" type="CharacterBody3D"]
-transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 0, 0, 0)
-script = ExtResource("1_kk4iq")
+script = ExtResource("1_qrl8k")
 character_name = "Scout"
 conversation_filename = "res://npcs/scout/conversation.json"
 
 [node name="Model" type="Skeleton3D" parent="."]
-transform = Transform3D(0.01, 0, 0, 0, -1.68587e-09, -0.01, 0, 0.01, -1.68587e-09, 0, 0, 0)
+transform = Transform3D(0.025, 0, 0, 0, -1.09278e-09, -0.025, 0, 0.025, -1.09278e-09, 0, 0, 0)
 bones/0/name = "GLTF_created_0_rootJoint"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -470,18 +469,19 @@ mesh = SubResource("ArrayMesh_wfooc")
 skeleton = NodePath("")
 
 [node name="Object_7" type="MeshInstance3D" parent="Model"]
+lod_bias = 3.0
 mesh = SubResource("ArrayMesh_lruvg")
 skin = SubResource("Skin_3x17d")
 
 [node name="CollisionShape3d" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
 shape = SubResource("CapsuleShape3D_mqg8p")
 
 [node name="FloatingLabel" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 script = ExtResource("3_511fw")
 custom_offset = Vector2(30, 100)
 
 [node name="SpeechBubble" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 script = ExtResource("4_wgi3y")

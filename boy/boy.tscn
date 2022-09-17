@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene load_steps=17 format=3 uid="uid://bjolk0gxqxyn6"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_3sjwo"]
 [ext_resource type="Texture2D" uid="uid://b2ib44m24g50k" path="res://boy/gltf/textures/Material_baseColor.png" id="1_417cr"]
+[ext_resource type="Script" path="res://player.gd" id="1_w2wcq"]
+[ext_resource type="Script" path="res://ui/speech_bubble.gd" id="3_ap80w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kocbk"]
 resource_name = "Material"
@@ -178,7 +179,7 @@ height = 4.0
 radius = 1.25
 
 [node name="Boy" type="CharacterBody3D"]
-script = ExtResource("1_3sjwo")
+script = ExtResource("1_w2wcq")
 
 [node name="Model" type="Node3D" parent="."]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
@@ -227,3 +228,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="CollisionShape3d" type="CollisionShape3D" parent="NearbyArea"]
 shape = SubResource("CylinderShape3D_8m7qy")
+
+[node name="SpeechBubble" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, 0)
+script = ExtResource("3_ap80w")

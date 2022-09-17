@@ -10,7 +10,8 @@ const ROTATION_SPEED = 0.3
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-# move out to common class for both NPC and character
+@onready var speech_bubble := $SpeechBubble
+
 var is_talking := false
 var is_talking_to: Character
 
@@ -26,7 +27,13 @@ func start_converstaion(other: Character):
 	other.is_talking = true
 	other.is_talking_to = self
 
-func handle_movement(delta):
+func end_conversation():
+	is_talking_to.is_talking = false
+	is_talking_to.is_talking_to = null
+	is_talking = false
+	is_talking_to = null
+
+func handle_movement(delta: float):
 	var direction := Vector3.ZERO
 	if is_talking:
 		var facing = is_talking_to.global_position - global_position
@@ -49,7 +56,7 @@ func handle_movement(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 #
-func _physics_process(delta):
+func _physics_process(delta: float):
 	handle_controls()
 	handle_movement(delta)
 	move_and_slide()

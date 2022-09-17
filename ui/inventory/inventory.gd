@@ -11,8 +11,6 @@ var drag_data
 
 signal items_changed(indexes)
 
-var rock = preload("res://items/rock.tres")
-
 func _ready():
 	player.toggle_inventory.connect(_on_toggle_inventory)
 	_on_toggle_inventory()
@@ -36,6 +34,12 @@ func add_item(item: InventoryItem) -> bool:
 		elif items[index].name == item.name:
 			items[index].amount += 1
 			emit_signal("items_changed", [index])
+			return true
+	return false
+
+func has_item(name: String):
+	for item in items:
+		if item != null and item.name == name:
 			return true
 	return false
 

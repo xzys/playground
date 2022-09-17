@@ -1,33 +1,25 @@
 extends Character
 class_name NPC
 
-
 @export var character_name := ""
 @export var conversation_filename := ""
 
 @onready var floating_label := $FloatingLabel
-@onready var speech_bubble := $SpeechBubble
+@onready var player: Character = get_node('/root/Game/Player')
 
-var conversation: Array[Dictionary]
+var conversation: Conversation
 
 func _ready():
-	# load conversation
-	var file = File.new()
-	assert(file.file_exists(conversation_filename))
-	file.open(conversation_filename, File.READ)
-	conversation = JSON.parse_string(file.get_as_text())
-	conversation = conversation[0]['else']
-
+	conversation = Conversation.load_from_file(conversation_filename)
 	floating_label.set_text(character_name, 'X to talk')
-	floating_label.can_interact = can_start_conversation()
-	print(conversation)
-
 
 func can_start_conversation():
-	# TOOD make sure player has echo
-	return conversation != null
+	floating_label.can_interact = conversation != null and player.inventory.has_item('echo')
+	return floating_label.can_interact
 
-func start_conversation(other: Character):
-	super.start_converstaion(other)
+func start_conversation(player: Character):
+	super.start_converstaion(player)
 	floating_label.hide_label()
-	speech_bubble.say(conversation[0].dialogue)
+	await conversation.start(self, player)
+	end_conversation()
+	floating_label.show_label()

@@ -1,8 +1,11 @@
 extends Character
+class_name Player
 
 @onready var area: Area3D = $NearbyArea
+@onready var inventory := get_node('/root/Game/UI/Inventory')
 
-signal toggle_inventory()
+signal toggle_inventory
+signal continue_conversation
 
 
 func _ready():
@@ -23,12 +26,15 @@ func handle_controls():
 		emit_signal("toggle_inventory")
 
 	if Input.is_action_just_pressed('interact'):
-		var bodies = area.get_overlapping_bodies()
-		for b in bodies:
-			if b is StaticItem:
-				b.pick_up()
-			elif b is NPC and b.can_start_conversation():
-				b.start_conversation(self)
+		if is_talking:
+			emit_signal("continue_conversation")
+		else:
+			var bodies = area.get_overlapping_bodies()
+			for b in bodies:
+				if b is StaticItem:
+					b.pick_up()
+				elif b is NPC and b.can_start_conversation():
+					b.start_conversation(self)
 
 func get_movement() -> Vector3:
 	# Get the input direction and handle the movement/deceleration.

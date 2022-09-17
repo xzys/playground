@@ -17,10 +17,10 @@ content_margin_top = 2.0
 content_margin_right = 13.0
 content_margin_bottom = 2.0
 bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
 
 [resource]
 default_font = ExtResource("1_4f5yv")

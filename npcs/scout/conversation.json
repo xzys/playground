@@ -1,6 +1,6 @@
 [
-	{
-		"condition": { "player_has": { "item": "echo" } },
+  {
+    "condition": { "player_has": { "item": "echo" } },
     "else": [
       { "dialogue": "Hello there" },
       { "response": "..." },
@@ -10,7 +10,7 @@
       { "response": "..." },
       { "dialogue": "Ah, I know what you need" },
       { "dialogue": "Here, take this" },
-      { "give_item": "res://programs/echo.res" },
+      { "give_item": "res://items/programs/echo.tres" },
       { "dialogue": "This is a program called 'echo'" },
       { "dialogue": "You can use it to say things" },
       { "dialogue": "Why don't you give it a try?" }
