@@ -1,6 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://ccpfpeaw8m8rv"]
+[gd_scene load_steps=23 format=3 uid="uid://ccpfpeaw8m8rv"]
 
-[ext_resource type="PackedScene" uid="uid://defgf48lcmfjy" path="res://boy/boy.tscn" id="1_aadj4"]
+[ext_resource type="PackedScene" path="res://boy/boy.tscn" id="1_aadj4"]
 [ext_resource type="Script" path="res://camera.gd" id="3_d6bc3"]
 [ext_resource type="PackedScene" uid="uid://uj5rl5joqfwl" path="res://level/tree.tscn" id="4_g2kpr"]
 [ext_resource type="PackedScene" uid="uid://vl5ypq1fxddh" path="res://npcs/cow.tscn" id="5_7n224"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://7t4e846nwx85" path="res://level/tree_pink.tscn" id="16_1m6ak"]
 [ext_resource type="PackedScene" uid="uid://bq0aeixf0q65w" path="res://level/tree_round.tscn" id="17_6un6l"]
 [ext_resource type="PackedScene" uid="uid://n86r8o28q0ph" path="res://level/tree_stack.tscn" id="18_yx8sp"]
+[ext_resource type="PackedScene" uid="uid://dolt8tsjjaxnx" path="res://npcs/scout/scout.tscn" id="19_a8jr5"]
 [ext_resource type="PackedScene" uid="uid://dut8hwgdfy8w5" path="res://items/rock.tscn" id="19_finpi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a30y8"]
@@ -24,7 +25,7 @@ size = Vector3(100, 1, 100)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xwfw"]
 shading_mode = 0
-albedo_color = Color(0.960784, 0.835294, 0.498039, 1)
+albedo_color = Color(0.847059, 0.870588, 0.678431, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_l64x3"]
 material = SubResource("StandardMaterial3D_1xwfw")
@@ -103,3 +104,6 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 27.3811, 0, -7.95764)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.2, 4)
 
 [node name="LabelCanvas" type="CanvasLayer" parent="."]
+
+[node name="Scout" parent="." instance=ExtResource("19_a8jr5")]
+transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, -4, 0, 0)

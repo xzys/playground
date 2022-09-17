@@ -1,6 +1,6 @@
 extends MarginContainer
 
-@onready var inventory = $Inventory
+@onready var inventory := $Inventory
 
 # handle when items are dropped outside of inventory
 func _can_drop_data(_position, data):

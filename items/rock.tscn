@@ -1,17 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dut8hwgdfy8w5"]
+[gd_scene load_steps=6 format=3 uid="uid://dut8hwgdfy8w5"]
 
 [ext_resource type="Script" path="res://items/static_item.gd" id="1_aituh"]
 [ext_resource type="Resource" uid="uid://bj4s08a5a3ig" path="res://items/rock.tres" id="2_7s2s6"]
 [ext_resource type="ArrayMesh" uid="uid://xbr1146vm1bq" path="res://items/rock.res" id="3_i7pa8"]
+[ext_resource type="Script" path="res://ui/floating_label.gd" id="4_cwjmd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oiqm1"]
-size = Vector3(0.85, 0.5, 0.75)
+size = Vector3(0.85, 0.6, 0.75)
 
 [node name="Rock" type="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 script = ExtResource("1_aituh")
 inventory_item = ExtResource("2_7s2s6")
-custom_offset = Vector2(40, 40)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_oiqm1")
@@ -19,3 +19,7 @@ shape = SubResource("BoxShape3D_oiqm1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("3_i7pa8")
 skeleton = NodePath("../..")
+
+[node name="FloatingLabel" type="Node3D" parent="."]
+script = ExtResource("4_cwjmd")
+custom_offset = Vector2(37, 40)

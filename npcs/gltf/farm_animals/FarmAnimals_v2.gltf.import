@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bufslho72ra4f"
-path="res://.godot/imported/FarmAnimals_v2.gltf-fad4c1f0e2d711602a0b4ee87f6a6d75.scn"
+path="res://.godot/imported/FarmAnimals_v2.gltf-111b2df28a8d4a5ffd2f334cd8226e78.scn"
 
 [deps]
 
-source_file="res://npcs/gltf/FarmAnimals_v2.gltf"
-dest_files=["res://.godot/imported/FarmAnimals_v2.gltf-fad4c1f0e2d711602a0b4ee87f6a6d75.scn"]
+source_file="res://npcs/gltf/farm_animals/FarmAnimals_v2.gltf"
+dest_files=["res://.godot/imported/FarmAnimals_v2.gltf-111b2df28a8d4a5ffd2f334cd8226e78.scn"]
 
 [params]
 

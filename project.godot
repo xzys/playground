@@ -9,10 +9,30 @@
 config_version=5
 
 _global_script_classes=[{
+"base": "CharacterBody3D",
+"class": &"Character",
+"language": &"GDScript",
+"path": "res://character.gd"
+}, {
+"base": "Node3D",
+"class": &"FloatingLabel",
+"language": &"GDScript",
+"path": "res://ui/floating_label.gd"
+}, {
 "base": "Resource",
 "class": &"InventoryItem",
 "language": &"GDScript",
 "path": "res://items/inventory_item.gd"
+}, {
+"base": "Character",
+"class": &"NPC",
+"language": &"GDScript",
+"path": "res://npcs/npc.gd"
+}, {
+"base": "Node3D",
+"class": &"SpeechBubble",
+"language": &"GDScript",
+"path": "res://ui/speech_bubble.gd"
 }, {
 "base": "StaticBody3D",
 "class": &"StaticItem",
@@ -20,7 +40,11 @@ _global_script_classes=[{
 "path": "res://items/static_item.gd"
 }]
 _global_script_class_icons={
+"Character": "",
+"FloatingLabel": "",
 "InventoryItem": "",
+"NPC": "",
+"SpeechBubble": "",
 "StaticItem": ""
 }
 

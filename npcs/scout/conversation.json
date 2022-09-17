@@ -1,0 +1,34 @@
+[
+	{
+		"condition": { "player_has": { "item": "echo" } },
+    "else": [
+      { "dialogue": "Hello there" },
+      { "response": "..." },
+      { "dialogue": "Hello?" },
+      { "response": "..." },
+      { "dialogue": "Hmm, it looks like you can't speak yet" },
+      { "response": "..." },
+      { "dialogue": "Ah, I know what you need" },
+      { "dialogue": "Here, take this" },
+      { "give_item": "res://programs/echo.res" },
+      { "dialogue": "This is a program called 'echo'" },
+      { "dialogue": "You can use it to say things" },
+      { "dialogue": "Why don't you give it a try?" }
+    ],
+    "then": [
+      { "response": "Hi" },
+      { "dialogue": "Hi!" },
+      { "dialogue": "Great, you can speak now!" },
+      { "response": "Yes" },
+      { "dialogue": "You probably have a lot of questions" },
+      { "dialogue": "Don't worry, they will all be answered in due time" },
+      { "response": "So what's a program?" },
+      { "dialogue": "A program, hmmmmm" },
+      { "dialogue": "Well, a program is something that can do something" },
+      { "dialogue": "There's lots of programs out there to find and collect" },
+      { "dialogue": "And eventually, you can write your own programs!" },
+      { "response": "Wow" },
+      { "dialogue": "Wow, indeed!" }
+    ]
+	}
+]

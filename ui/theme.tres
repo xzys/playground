@@ -1,8 +1,26 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://h8ohxxnspjb1"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://h8ohxxnspjb1"]
 
 [ext_resource type="FontFile" uid="uid://ddob34e3t5pfy" path="res://assets/m5x7.ttf" id="1_4f5yv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rfwf5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btiun"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5af1"]
+content_margin_left = 13.0
+content_margin_top = 2.0
+content_margin_right = 13.0
+content_margin_bottom = 2.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [resource]
 default_font = ExtResource("1_4f5yv")
@@ -25,3 +43,7 @@ MarginContainer/constants/margin_bottom = 20
 MarginContainer/constants/margin_left = 20
 MarginContainer/constants/margin_right = 20
 MarginContainer/constants/margin_top = 20
+Panel/styles/panel = SubResource("StyleBoxFlat_btiun")
+SpeechLabel/base_type = &"Label"
+SpeechLabel/colors/font_color = Color(0.0470588, 0.176471, 0.345098, 1)
+SpeechLabel/styles/normal = SubResource("StyleBoxFlat_x5af1")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://defgf48lcmfjy"]
+[gd_scene load_steps=16 format=3]
 
-[ext_resource type="Script" path="res://character.gd" id="1_3sjwo"]
+[ext_resource type="Script" path="res://player.gd" id="1_3sjwo"]
 [ext_resource type="Texture2D" uid="uid://b2ib44m24g50k" path="res://boy/gltf/textures/Material_baseColor.png" id="1_417cr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kocbk"]
